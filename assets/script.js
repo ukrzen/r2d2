@@ -1,5 +1,5 @@
 $(function () {
-    var ALPHABYTE="abcdefghijklmnopqrstuvwxyz_";
+    var ALPHABYTE="abcdefghijklmnopqrstuvwxyz!";
     var sounds = {};
     ALPHABYTE.split("").forEach(function (letter) {
         sounds[letter]=  new Howl({
@@ -37,7 +37,7 @@ $(function () {
             }
             $("#translation").val( $("#translation").val() + letter);
             if(letter==" ")
-                letter='_';
+                letter='~';
             if(ALPHABYTE.indexOf(letter) !=-1)
             {
                 var sound = sounds[letter];
