@@ -244,3 +244,8 @@ footer
         display:none;
     }
 }
+@media screen and (max-height: 280px){
+    footer:{
+        display:none;
+    }
+}
