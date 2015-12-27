@@ -40,7 +40,7 @@ header.visible
 header
 {
     position:fixed;
-    height:195px;
+    min-height:195px;
     padding-top:5px;
     padding-left:1vw;
     padding-right:1vw;
@@ -217,6 +217,11 @@ footer
     display:none;
 }
 @media screen and (max-width: 640px){
+    form
+    {
+        padding:0px;
+        margin:0px;
+    }
     .content
     {
         background-image: url(bg480.jpg);
@@ -233,10 +238,13 @@ footer
     {
         width:100vw !important;
         margin-left:0;
+
     }
     button, input
     {
         width:98vw !important;
+        min-width:98vw  !important;
+        max-width:98vw  !important;
     }
     .share-buttons
     {
