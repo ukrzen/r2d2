@@ -55,6 +55,7 @@ header
 }
 .aurebesh{
     font-family:'aurebeshmedium';
+    text-rendering:optimizeLegibility;
 }
 input:focus
 {
@@ -214,5 +215,9 @@ footer
     button, input
     {
         width:98vw !important;
+    }
+    .share-buttons
+    {
+        display:none;
     }
 }
