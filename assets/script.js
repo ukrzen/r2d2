@@ -60,7 +60,7 @@ $(function () {
             'eventValue': 1
         });
         window.currentWord = transliterate($("#text").val()).split("");
-        location.hash = $("#text").val();
+        location.hash = encodeURIComponent($("#text").val());
         $("#say").addClass("pulse");
         playNextLetter();
         e.preventDefault();
@@ -68,7 +68,7 @@ $(function () {
     });
     if(location.hash)
     {
-        $("#text").val(location.hash.slice(1));
+        $("#text").val(decodeURIComponent(location.hash.slice(1)));
     }
     setTimeout(function(){
        $("header").addClass("visible");
