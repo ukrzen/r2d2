@@ -1,8 +1,7 @@
 $(function () {
     var ALPHABYTE="abcdefghijklmnopqrstuvwxyz_";
     ALPHABYTE.split("").forEach(function (letter) {
-        $("<audio id='" + letter + "Letter' " + " src='media/" + letter + ".mp3' >").appendTo("body");
-
+        $("<audio id='" + letter + "Letter' ><source src='media/" + letter + ".ogg' type='audio/ogg' /> <source src='media/" + letter + ".mp3' type='audio/mpeg' />").appendTo("body");
     });
     function transliterate(text)
     {
@@ -49,9 +48,9 @@ $(function () {
         });
         $("#translation").val("");
         ga('send', {
-            'hitType': 'event',          // Required.
-            'eventCategory': 'Main',   // Required.
-            'eventAction':'Help' ,      // Required.
+            'hitType': 'event',
+            'eventCategory': 'Main',
+            'eventAction':'Say' ,
             'eventLabel':  $("#text").val(),
             'eventValue': 1
         });
