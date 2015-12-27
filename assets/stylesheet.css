@@ -154,12 +154,13 @@ input:hover, button:hover
 {
     border:2px solid rgba(50,250,50,0.4);
 }
-input
+
+input,input:-webkit-autofill
 {
-    color:rgba(50,250,50,0.4);
+    color:rgba(50,250,50,0.4) !important;
 
 
-    background-color:rgba(255,255,255,0.2);
+    background-color:rgba(255,255,255,0.2) !important;
     /*border-radius:15px;*/
     padding-left:10px;
     padding-right:10px;
@@ -208,10 +209,26 @@ footer
         background-image: url(bg720.jpg);
     }
 }
+.desktop
+{
+    display:block;
+}
+.mobile
+{
+    display:none;
+}
 @media screen and (max-width: 640px){
     .content
     {
         background-image: url(bg480.jpg);
+    }
+    .mobile
+    {
+        display:block;
+    }
+    .desktop
+    {
+        display:none;
     }
     header
     {
