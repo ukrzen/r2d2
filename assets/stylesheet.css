@@ -196,7 +196,16 @@ footer
     opacity: 0.3;
     -webkit-filter: saturate(20%);
 }
+@media screen and (max-width: 1280px) {
+    .content {
+        background-image: url(bg720.jpg);
+    }
+}
 @media screen and (max-width: 640px){
+    .content
+    {
+        background-image: url(bg480.jpg);
+    }
     header
     {
         width:100vw !important;
