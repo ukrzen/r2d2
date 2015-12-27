@@ -60,12 +60,16 @@ $(function () {
             'eventValue': 1
         });
         window.currentWord = transliterate($("#text").val()).split("");
+        location.hash = $("#text").val();
         $("#say").addClass("pulse");
         playNextLetter();
         e.preventDefault();
 
     });
-
+    if(location.hash)
+    {
+        $("#text").val(location.hash.slice(1));
+    }
     setTimeout(function(){
        $("header").addClass("visible");
     },1)
